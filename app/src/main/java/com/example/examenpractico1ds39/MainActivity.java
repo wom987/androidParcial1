@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -27,8 +28,21 @@ public class MainActivity extends AppCompatActivity {
 
         adapteranima = new AnimalesAdapter(obtenerAnimales());
         rcvAnimal.setAdapter(adapteranima);
+        adapteranima.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String data = obtenerAnimales().get(rcvAnimal.getChildAdapterPosition(v)).getTitulo();
+                if(data=="Aves"){
+                    Toast.makeText(getApplicationContext(),"Seleccion: "+data,Toast.LENGTH_SHORT).show();
+                }
 
+            }
+        });
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+
+
         }
 
 
@@ -49,4 +63,5 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menuoverflow, menu);
         return true;
     }
+
 }

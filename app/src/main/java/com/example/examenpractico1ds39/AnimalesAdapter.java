@@ -9,10 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class AnimalesAdapter extends RecyclerView.Adapter<AnimalesAdapter.ViewHolder>
+public class AnimalesAdapter extends RecyclerView.Adapter<AnimalesAdapter.ViewHolder> implements View.OnClickListener
 {
 
-
+    private View.OnClickListener listener;
+    @Override
+    public void onClick(View v) {
+        if(listener!=null){
+            listener.onClick(v);
+        }
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -40,10 +46,12 @@ public class AnimalesAdapter extends RecyclerView.Adapter<AnimalesAdapter.ViewHo
 
         ViewHolder viewHolder= new ViewHolder(view);
 
-
+        view.setOnClickListener(this);
         return viewHolder;
     }
-
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.fotoPortada.setImageResource(listaAnimales.get(position).getPortada());
