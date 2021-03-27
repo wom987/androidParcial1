@@ -4,6 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#c2ffc2"
     tools:context=".MamiferosAct">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="150dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Mamiferos"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnVideoM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="40dp"
+        android:text="Ver Video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="359dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Los mamíferos son un grupo de animales que tienen unas características propias que los diferencian de otros animales. Por ejemplo, gatos y perros son mamíferos, pero los peces y los loros no lo son. Nosotros, los seres humanos, también somos animales mamíferos. "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVideoM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="405dp"
+        android:layout_height="267dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mamiferosact" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
@@ -33,10 +34,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String data = obtenerAnimales().get(rcvAnimal.getChildAdapterPosition(v)).getTitulo();
                 if(data=="Aves"){
-                    Toast.makeText(getApplicationContext(),"Seleccion: "+data,Toast.LENGTH_SHORT).show();
-                }else if(data=="Peces"){}
-                else if(data=="Insectos"){}
-                else if(data=="Mamiferos"){}
+                    Intent actAves = new Intent(MainActivity.this, AvesAct.class);
+                    startActivity(actAves);
+                }else if(data=="Peces"){
+                    Intent actPeces = new Intent(MainActivity.this, PecesAct.class);
+                    startActivity(actPeces);
+                }
+                else if(data=="Insectos"){
+                    Intent actInsec = new Intent(MainActivity.this, InsectosAct.class);
+                    startActivity(actInsec);
+                }
+                else if(data=="Mamiferos"){
+                    Intent actMam = new Intent(MainActivity.this, MamiferosAct.class);
+                    startActivity(actMam);
+                }
 
             }
         });
