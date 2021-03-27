@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 String data = obtenerAnimales().get(rcvAnimal.getChildAdapterPosition(v)).getTitulo();
                 if(data=="Aves"){
                     Toast.makeText(getApplicationContext(),"Seleccion: "+data,Toast.LENGTH_SHORT).show();
-                }
+                }else if(data=="Peces"){}
+                else if(data=="Insectos"){}
+                else if(data=="Mamiferos"){}
 
             }
         });

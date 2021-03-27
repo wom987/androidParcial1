@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenPractico1Ds39">
-        <activity android:name=".mamiferos"/>
-        <activity android:name=".peces"/>
-        <activity android:name=".aves"/>
-        <activity android:name=".insectos"/>
+        <activity android:name=".MamiferosAct"></activity>
+        <activity android:name=".PecesAct" />
+        <activity android:name=".InsectosAct" />
+        <activity android:name=".AvesAct" />
+        <activity android:name=".AvesActivity" />
+        <activity android:name=".mamiferos" />
+        <activity android:name=".peces" />
+        <activity android:name=".aves" />
+        <activity android:name=".insectos" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
