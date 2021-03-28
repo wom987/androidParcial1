@@ -15,6 +15,7 @@ public class PecesAct extends AppCompatActivity {
         btnMostrar = findViewById(R.id.btnVideoP);
         btnMostrar.setOnClickListener((v -> {
             Intent act =new Intent(getApplicationContext(), peces.class);
+
             startActivity(act);
         }));
     }
